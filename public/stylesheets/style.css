@@ -1,0 +1,14 @@
+body{
+  background-color: #f7f7f7;
+  color: black;
+}
+
+.hide-me{
+  display: none;
+}
+
+.vcenter{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
