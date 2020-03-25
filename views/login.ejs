@@ -1,40 +1,58 @@
 <div class="container">
-  <div class="row">
-    <div class="login-wrapper-img one-half column">
-      <div class="container">
-        <div clas="row">
-          <div class="">
-            <img class="login-img-logo" src="/images/no-logo.png">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="login-wrapper one-half column">
-      <div class="container">
-        <div class="row">
-          <h3>Welcome</h3>
-          <h5>Please log in or register</h5>
-          <form>
-            <label for="usremail">Email:</label>
-            <input type="email" id="usremail" class="login-txtbox" name="usremail" placeholder="example@host.com">
-            <label for="usrpwd">Password:</label>
-            <input type="password" id="usrpwd" class="login-txtbox" name="usrpwd" placeholder="Your password...">
-            <div class="login-btn-wrap">
-              <button type="submit">Log in</button>
-            </div>
-            <div class="login-btn-wrap">
-              <a href="">Register</a>
-            </div>
-          </form>
-        <div>
-        <hr>
-        <div class="row">
-          <div class="login-btn-wrap">
-            <button type="button">GOOGLE</button>
-            <button type="button">FACEBOOK</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="row">
+		<div class="login-wrapper-img one-half column">
+			<div class="container">
+				<div clas="row">
+					<div class="">
+						<img class="login-img-logo" src="/images/no-logo.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="login-wrapper one-half column">
+			<div class="login-container container">
+				<div class="row">
+					<h3>Welcome</h3>
+					<h5>Please log in or register</h5>
+					<form>
+						<label for="usremail">Email:</label>
+						<input type="email" id="usremail" class="login-txtbox" name="usremail" placeholder="example@host.com">
+						<label for="usrpwd">Password:</label>
+						<input type="password" id="usrpwd" class="login-txtbox" name="usrpwd" placeholder="Your password...">
+						<div class="login-btn-wrap">
+							<button type="submit">Log in</button>
+						</div>
+						<div class="login-btn-wrap">
+							<a id="linkRegister">Register</a>
+						</div>
+					</form>
+					<hr>
+					<div class="login-btn-wrap">
+						<button type="button">GOOGLE</button>
+						<button type="button">FACEBOOK</button>
+					</div>
+				</div>
+			</div>
+			<div class="register-container container hide-me">
+				<div class="row">
+					<h3>Register</h3>
+					<form>
+						<label for="usrname">Name:</label>
+						<input type="text" id="usrname" class="login-txtbox" name="usrname" placeholder="John Doe...">
+						<label for="usremail">Email:</label>
+						<input type="email" id="usremail" class="login-txtbox" name="usremail" placeholder="example@host.com">
+						<label for="usrpwd">Password:</label>
+						<input type="password" id="usrpwd" class="login-txtbox" name="usrpwd" placeholder="Your password...">
+						<label for="usrpwdretype">Re-type password:</label>
+						<input type="password" id="usrpwdretype" class="login-txtbox" name="usrpwdretype" placeholder="Your password...">
+						<hr>
+						<div class="login-btn-wrap">
+							<button id="register-btn-cancel" type="button">Cancel</button>
+							<button type="submit">Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
