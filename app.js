@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var expressLayouts = require('express-ejs-layouts');
+var mongoose = require('mongoose');
+var fs = require('fs');
 
 var loginRouter = require('./routes/login');
 var usersRouter = require('./routes/users');
@@ -21,13 +23,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.set('layout','layouts/layout');
-app.use(expressLayouts)
+app.use(expressLayouts);
+
+mongoose.connect('mongodb://127.0.0.1/Home'); //set to home mongodb
+
+//load all files in models dir
+fs.readdirSync(__dirname + '/models').forEach((filename)=>{
+  if(~filename.indexOf('.js')) require(__dirname + '/models/' + filename);
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', loginRouter);
 app.use('/users', usersRouter);
-
 
 
 // catch 404 and forward to error handler
