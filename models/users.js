@@ -3,10 +3,20 @@ var Schema = mongoose.Schema;
 
 var usersSchema = new Schema(
 {
-    name: String,
-    email: String,
-    password: String
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
 }
 );
 
-mongoose.model('homeusers', usersSchema);
+var Users = mongoose.model('homeusers', usersSchema);
+module.exports = Users;
