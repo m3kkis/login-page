@@ -4,12 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var dotenv = require('dotenv');
+dotenv.config();
+
 var expressLayouts = require('express-ejs-layouts');
 var mongoose = require('mongoose');
 var fs = require('fs');
 var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
+
 
 var loginRouter = require('./routes/login');
 var usersRouter = require('./routes/users');

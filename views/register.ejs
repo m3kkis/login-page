@@ -13,7 +13,7 @@
 			<div class="register-container container">
 				<div class="row">
 					<h3>Register</h3>
-					<% include ./partials/messages %>
+					 
 					<form action='/users/register' method="POST">
 						<label for="usrname">Name:</label>
 						<input type="text" id="usrname" class="login-txtbox" name="usrname" placeholder="John Doe..." value="<%= typeof usrname != 'undefined' ? usrname : '' %>">
